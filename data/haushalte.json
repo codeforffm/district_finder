@@ -1,10 +1,10 @@
 { "collection" :
   {
     "version" : "1.0",
-    "href" : "https://github.com/codeforffm/district_finder/upload/data",
+    "href" : "https://github.com/codeforffm/district_finder/data",
     
     "links" : [
-      {"rel" : "json", "href" : "https://github.com/codeforffm/district_finder/upload/data"}
+      {"rel" : "json", "href" : "https://github.com/codeforffm/district_finder/data.json"}
     ],
         
    {
