@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.14.2/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 300px;
+        width: 400px;
+        float: left;
+        margin-left: 10px;
+        border: 1px solid green;
+      }
+    </style>
+    <script src="http://openlayers.org/en/v3.14.2/build/ol.js" type="text/javascript"></script>
+    <script src="maps.js" type="text/javascript"></script>
+    <title>District Finder</title>
+  </head>
+  <body onload="init()">
+    <h2>Frankfurt</h2>
+    <div id="map" class="map"></div>
+    <div id="map2" class="map"></div>
+    <div id="map3" class="map"></div>
+    <script type="text/javascript">
+      function init() {
+        
+
+        //HeatMap Data
+        var values = [
+          [8.669173, 50.106046, 20],
+          [8.685951, 50.116907, 15],
+          [8.649173, 50.106046, 10],
+          [8.645951, 50.116907, 1]
+        ]
+
+        var layers = [
+            osmMapLayer(),
+            districtLayer(),
+            heatmapLayer(values)
+        ];
+
+        // Generating the Map
+        buildMap("map", [8.669173, 50.116046], layers);
+        var layers2 = [
+            districtLayer(),
+        ];
+        buildMap("map2", [8.669173, 50.116046], layers2);
+        var layers3 = [
+            districtLayer(),
+            heatmapLayer(values)
+        ];
+        buildMap("map3", [8.669173, 50.116046], layers3);
+      }
+
+      
+    </script>
+  </body>
+</html>
