@@ -1,4 +1,4 @@
-{
+{ "prices" : [
     {  district="Altstadt" prices="20,42" },
     {  district="Innenstadt" prices="19,39" },
     {  district="Bahnhofsviertel" prices="18,87" },
@@ -44,4 +44,4 @@
     {  district="Nieder-Eschbach" prices="11,44" },
     {  district="Bergen-Enkheim" prices="11,5" },
     {  district="Frankfurter Berg" prices="10,93" }
-}
+]}
