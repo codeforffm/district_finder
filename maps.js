@@ -1,3 +1,9 @@
+/**
+* Build the Map!
+* target: String the id where the map is going to be 
+* coord: [longitude:float, latitude:float] the coordinates to be shown
+* layers: ol.Layer the different layers to be shown on the map
+*/
 function buildMap(target, coord, layers) {
   var map = new ol.Map({
     target: target,
@@ -10,6 +16,9 @@ function buildMap(target, coord, layers) {
   return map;
 }
 
+/**
+* get the OSM Map as a layer
+*/
 function osmMapLayer() {
   var layer = new ol.layer.Tile({
     source: new ol.source.OSM()
@@ -17,6 +26,9 @@ function osmMapLayer() {
   return layer;
 }
 
+/**
+*Get the districts of Frankfurt as a layer
+*/
 function districtLayer() {
   var districtsLayer = new ol.layer.Vector({
     source: new ol.source.Vector({
@@ -30,6 +42,11 @@ function districtLayer() {
   return districtsLayer;
 }
 
+/**
+*Get the heatmap as a layer
+* values: [[longitude:float, latitude:float, weight:float]] A list of coordinates with a weight. The higher the weight, the hotter this point is:)
+*     Values for the weight must be in the range from 0-1.
+*/
 function heatmapLayer(values) {
   var data = new ol.source.Vector();
 
