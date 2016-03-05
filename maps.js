@@ -48,7 +48,8 @@ function heatmapLayer(values) {
   //building the heatmap layer
   var heatmapLayer = new ol.layer.Heatmap({
     source:data,
-    radius:30
+    radius:20,
+    opacity:0.9
   });
 
   return heatmapLayer;
