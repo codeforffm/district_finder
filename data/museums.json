@@ -1,26 +1,26 @@
-{ collection" :
+{ "collection" :
   {
     "version" : "1.0",
-    "href" : http://codeforffm.de/data/museums.json,
+    "href" : "http://codeforffm.de/data/museums.json",
     "items" :
     [
-      {
-        "data" : [
-	  {"name" : "name",          "value" : "Alte Oper"},
-	  {"name" : "name-extended", "value" : "Alte Oper Frankfurt Konzert- und Kongresszentrum GmbH"},
-	  {"name" : "address",       "value" : "Opernplatz 1"},
-	  {"name" : "city",          "value" : "Frankfurt am Main"},
-	  {"name" : "district",      "value" : "Innenstadt"},
-	  {"name" : "postal-code",   "value" : "60313"},
-	  {"name" : "phone-number",  "value" : "+49 (0) 69 13400"},
-	  {"name" : "fax-number",    "value" : "+49 (0) 69 1340284"},
-	  {"name" : "email",         "value" : "kontakt@alteoper.de"},
-	  {"name" : "url",           "value" : "http://www.alteoper.de"},
-	],
-	"links" : [
+        {
+          "data" : [
+          {"name" : "name",          "value" : "Alte Oper"},
+          {"name" : "name-extended", "value" : "Alte Oper Frankfurt Konzert- und Kongresszentrum GmbH"},
+          {"name" : "address",       "value" : "Opernplatz 1"},
+          {"name" : "city",          "value" : "Frankfurt am Main"},
+          {"name" : "district",      "value" : "Innenstadt"},
+          {"name" : "postal-code",   "value" : "60313"},
+          {"name" : "phone-number",  "value" : "+49 (0) 69 13400"},
+          {"name" : "fax-number",    "value" : "+49 (0) 69 1340284"},
+          {"name" : "email",         "value" : "kontakt@alteoper.de"},
+          {"name" : "url",           "value" : "http://www.alteoper.de"}
+          ]
+        },{
+        "links" : [
           {"rel" : "picture", "href" : "http://examples.org/images/xy.jpg", "prompt" : "Picture", "render" : "image"}
-        ]
-      },
+        ]}
     ]
   }
 }
