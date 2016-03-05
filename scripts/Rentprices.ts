@@ -1,7 +1,7 @@
 module DistrictFinder{
     export class Rentprice  {
         district: string;
-        prices: string;
+        prices: number;
     }
 
     export class Rentprices  {

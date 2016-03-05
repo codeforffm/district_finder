@@ -4,8 +4,11 @@ module DistrictFinder{
         static responseText : string;
         
         static toInstance<T>(obj: T, jsonfilename: string) : T {
-            var fs = require('fs');
-            var jsonObj = JSON.parse(fs.readFileSync('./data/' + jsonfilename).toString());
+            var request = new XMLHttpRequest();
+            request.open("get", "https://raw.githubusercontent.com/codeforffm/district_finder/master/data/" + jsonfilename, false);
+            request.send();
+
+            var jsonObj = JSON.parse(request.responseText);
 
             if (typeof obj["fromJSON"] === "function") {
                 obj["fromJSON"](jsonObj);
@@ -17,10 +20,6 @@ module DistrictFinder{
             }
 
             return obj;
-        }
-        
-        static RequestListener(){
-            
         }
     }
 }
