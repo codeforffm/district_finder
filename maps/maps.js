@@ -10,7 +10,8 @@ function buildMap(target, coord, layers) {
     layers: layers,
     view: new ol.View({
       center: ol.proj.fromLonLat(coord),
-      zoom: 10
+      zoom: 10,
+      minZoom:10
     })
   });
   return map;

@@ -41,7 +41,7 @@
         "pool-name": "Panoramabad Bornheim",
         "pool-type": "Hallenbad",
         "addr:city": "Frankfurt",
-        "addr:housenumber":  "60",
+        "addr:housenumber": "60",
         "addr:postcode": "60385",
         "addr:street": "Inheidener Straße"
       },
@@ -59,17 +59,29 @@
         "pool-name": "Zum Rebstockbad",
         "pool-type": "Hallenbad",
         "addr:city": "Frankfurt",
-        "addr:housenumber":  "7",
+        "addr:housenumber": "7",
         "addr:postcode": "60486",
         "addr:street": "Zum Rebstockbad"
       },
       {
         "Codes": 13,
-        "district": "Sachsenhausen-Nord"
+        "district": "Sachsenhausen-Nord",
+        "pool-name": "Textorbad Sachsenhausen",
+        "pool-type": "Hallenbad",
+        "addr:city": "Frankfurt",
+        "addr:housenumber": "42",
+        "addr:postcode": "60594",
+        "addr:street": "Textorstraße"
       },
       {
         "Codes": 14,
-        "district": "Sachsenhausen-Süd"
+        "district": "Sachsenhausen-Süd",
+        "pool-name": "Freibad Stadion",
+        "pool-type": "Freibad",
+        "addr:city": "Frankfurt",
+        "addr:housenumber": "362",
+        "addr:postcode": "60528",
+        "addr:street": "Mörfelder Landstraße"
       },
       {
         "Codes": 16,
@@ -93,7 +105,7 @@
         "pool-name": "Freibad Brentanobad",
         "pool-type": "Freibad",
         "addr:city": "Frankfurt",
-        "addr:housenumber":  "",
+        "addr:housenumber": "",
         "addr:postcode": "60489",
         "addr:street": "Rödelheimer Parkweg"
       },
@@ -103,7 +115,7 @@
         "pool-name": "Freibad Hausen",
         "pool-type": "Freibad",
         "addr:city": "Frankfurt",
-        "addr:housenumber":  "341",
+        "addr:housenumber": "341",
         "addr:postcode": "60488",
         "addr:street": "Ludwig-Landmann-Straße"
       },
@@ -117,7 +129,7 @@
         "pool-name": "Titus Thermen",
         "pool-type": "Therme",
         "addr:city": "Frankfurt",
-        "addr:housenumber":  "2",
+        "addr:housenumber": "2",
         "addr:postcode": "60439",
         "addr:street": "Walter-Möller-Platz"
       },
@@ -139,9 +151,9 @@
         "pool-name": "Freibad Eschersheim",
         "pool-type": "Freibad",
         "addr:city": "Frankfurt",
-        "addr:housenumber":  "",
+        "addr:housenumber": "",
         "addr:postcode": "60439",
-        "addr:street": "Alexander-Riese-Weg "
+        "addr:street": "Alexander-Riese-Weg"
       },
       {
         "Codes": 29,
@@ -173,7 +185,25 @@
       },
       {
         "Codes": 36,
-        "district": "Höchst"
+        "district": "Höchst",
+        "items": [
+          {
+            "pool-name": "Freibad Silo",
+            "pool-type": "Freibad",
+            "addr:city": "Frankfurt",
+            "addr:housenumber": "100",
+            "addr:postcode": "65929",
+            "addr:street": "Hunsrückstraße"
+          },
+          {
+            "pool-name": "Hallenbad Höchst",
+            "pool-type": "Hallenbad",
+            "addr:city": "Frankfurt",
+            "addr:housenumber": "21",
+            "addr:postcode": "65929",
+            "addr:street": "Melchiorstraße"
+          }
+        ]
       },
       {
         "Codes": 37,
@@ -209,11 +239,35 @@
       },
       {
         "Codes": 45,
-        "district": "Nieder-Eschbach"
+        "district": "Nieder-Eschbach",
+        "pool-name": "Freibad Nieder-Eschbach",
+        "pool-type": "Freibad",
+        "addr:city": "Frankfurt",
+        "addr:housenumber": "22",
+        "addr:postcode": "60437",
+        "addr:street": "Heinrich-Becker-Straße"
       },
       {
         "Codes": 46,
-        "district": "Bergen-Enkheim"
+        "district": "Bergen-Enkheim",
+        "items": [
+          {
+            "pool-name": "Riedbad Bergen-Enkheim",
+            "pool-type": "Freibad",
+            "addr:city": "Frankfurt",
+            "addr:housenumber": "2",
+            "addr:postcode": "60388",
+            "addr:street": "Fritz-Schubert-Ring"
+          },
+          {
+            "pool-name": "Riedbad Bergen-Enkheim",
+            "pool-type": "Hallenbad",
+            "addr:city": "Frankfurt",
+            "addr:housenumber": "2",
+            "addr:postcode": "60388",
+            "addr:street": "Fritz-Schubert-Ring"
+          }
+        ]
       },
       {
         "Codes": 47,
