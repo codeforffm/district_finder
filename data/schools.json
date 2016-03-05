@@ -1,0 +1,28 @@
+{ collection" :
+  {
+    "version" : "1.0",
+    "href" : http://codeforffm.de/data/schools.json,
+    "items" :
+    [
+      {
+        "data" : [
+	  {"name" : "name",         "value" : "Georg-Büchner-Schule"},
+	  {"name" : "name",         "value" : "Alte Oper Frankfurt Konzert- und Kongresszentrum GmbH"},
+	  {"name" : "address",      "value" : "Pfingstbrunnenstraße 15-17"},
+	  {"name" : "postal-code",  "value" : "60486"},
+	  {"name" : "city",         "value" : "Frankfurt am Main"},
+	  {"name" : "district",     "value" : "Bockenheim"},
+	  {"name" : "phone-number", "value" : "+49 (0)69 212 34130"},
+	  {"name" : "fax-number",   "value" : "+49 (0)69 212 39006"},
+	  {"name" : "email",        "value" : "poststelle.georg-buechner-schule@stadt-frankfurt.de"},
+	  {"name" : "url",          "value" : "http://www.gbs-ffm.de"},
+	  {"name" : "pupils",       "value" : "1002"},
+	  {"name" : "classes",      "value" : "45"},
+	],
+	"links" : [
+          {"rel" : "picture", "href" : "http://examples.org/images/xy.jpg", "prompt" : "Picture", "render" : "image"}
+        ]
+      },
+    ]
+  }
+}
