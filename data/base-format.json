@@ -1,183 +1,188 @@
-{ "districts": [
-  {
-    "codes":1,
-    "name":"Altstadt"
-  },
-  {
-    "codes":2,
-    "name":"Innenstadt"
-  },
-  {
-    "codes":3,
-    "name":"Bahnhofsviertel"
-  },
-  {
-    "codes":4,
-    "name":"Westend-Süd"
-  },
-  {
-    "codes":5,
-    "name":"Westend-Nord"
-  },
-  {
-    "codes":6,
-    "name":"Nordend-West"
-  },
-  {
-    "codes":7,
-    "name":"Nordend-Ost"
-  },
-  {
-    "codes":8,
-    "name":"Ostend"
-  },
-  {
-    "codes":9,
-    "name":"Bornheim"
-  },
-  {
-    "codes":10,
-    "name":"Gutleutviertel"
-  },
-  {
-    "codes":11,
-    "name":"Gallus"
-  },
-  {
-    "codes":12,
-    "name":"Bockenheim"
-  },
-  {
-    "codes":13,
-    "name":"Sachsenhausen-Nord"
-  },
-  {
-    "codes":14,
-    "name":"Sachsenhausen-Süd"
-  },
-  {
-    "codes":16,
-    "name":"Oberrad"
-  },
-  {
-    "codes":17,
-    "name":"Niederrad"
-  },
-  {
-    "codes":18,
-    "name":"Schwanheim"
-  },
-  {
-    "codes":19,
-    "name":"Griesheim"
-  },
-  {
-    "codes":20,
-    "name":"Rödelheim"
-  },
-  {
-    "codes":21,
-    "name":"Hausen"
-  },
-  {
-    "codes":22,
-    "name":"Praunheim"
-  },
-  {
-    "codes":24,
-    "name":"Heddernheim"
-  },
-  {
-    "codes":25,
-    "name":"Niederursel"
-  },
-  {
-    "codes":26,
-    "name":"Ginnheim"
-  },
-  {
-    "codes":27,
-    "name":"Dornbusch"
-  },
-  {
-    "codes":28,
-    "name":"Eschersheim"
-  },
-  {
-    "codes":29,
-    "name":"Eckenheim"
-  },
-  {
-    "codes":30,
-    "name":"Preungesheim"
-  },
-  {
-    "codes":31,
-    "name":"Bonames"
-  },
-  {
-    "codes":32,
-    "name":"Berkersheim"
-  },
-  {
-    "codes":33,
-    "name":"Riederwald"
-  },
-  {
-    "codes":34,
-    "name":"Seckbach"
-  },
-  {
-    "codes":35,
-    "name":"Fechenheim"
-  },
-  {
-    "codes":36,
-    "name":"Höchst"
-  },
-  {
-    "codes":37,
-    "name":"Nied"
-  },
-  {
-    "codes":38,
-    "name":"Sindlingen"
-  },
-  {
-    "codes":39,
-    "name":"Zeilsheim"
-  },
-  {
-    "codes":40,
-    "name":"Unterliederbach"
-  },
-  {
-    "codes":41,
-    "name":"Sossenheim"
-  },
-  {
-    "codes":42,
-    "name":"Nieder-Erlenbach"
-  },
-  {
-    "codes":43,
-    "name":"Kalbach-Riedberg"
-  },
-  {
-    "codes":44,
-    "name":"Harheim"
-  },
-  {
-    "codes":45,
-    "name":"Nieder-Eschbach"
-  },
-  {
-    "codes":46,
-    "name":"Bergen-Enkheim"
-  },
-  {
-    "codes":47,
-    "name":"Frankfurter Berg"
+{
+  "collection": {
+    "version": "1.0",
+    "href": "http://codeforffm.de/data/name.json",
+    "items": [
+      {
+        "Codes": 1,
+        "Stadtteil": "Altstadt"
+      },
+      {
+        "Codes": 2,
+        "Stadtteil": "Innenstadt"
+      },
+      {
+        "Codes": 3,
+        "Stadtteil": "Bahnhofsviertel"
+      },
+      {
+        "Codes": 4,
+        "Stadtteil": "Westend-Süd"
+      },
+      {
+        "Codes": 5,
+        "Stadtteil": "Westend-Nord"
+      },
+      {
+        "Codes": 6,
+        "Stadtteil": "Nordend-West"
+      },
+      {
+        "Codes": 7,
+        "Stadtteil": "Nordend-Ost"
+      },
+      {
+        "Codes": 8,
+        "Stadtteil": "Ostend"
+      },
+      {
+        "Codes": 9,
+        "Stadtteil": "Bornheim"
+      },
+      {
+        "Codes": 10,
+        "Stadtteil": "Gutleutviertel"
+      },
+      {
+        "Codes": 11,
+        "Stadtteil": "Gallus"
+      },
+      {
+        "Codes": 12,
+        "Stadtteil": "Bockenheim"
+      },
+      {
+        "Codes": 13,
+        "Stadtteil": "Sachsenhausen-Nord"
+      },
+      {
+        "Codes": 14,
+        "Stadtteil": "Sachsenhausen-Süd"
+      },
+      {
+        "Codes": 16,
+        "Stadtteil": "Oberrad"
+      },
+      {
+        "Codes": 17,
+        "Stadtteil": "Niederrad"
+      },
+      {
+        "Codes": 18,
+        "Stadtteil": "Schwanheim"
+      },
+      {
+        "Codes": 19,
+        "Stadtteil": "Griesheim"
+      },
+      {
+        "Codes": 20,
+        "Stadtteil": "Rödelheim"
+      },
+      {
+        "Codes": 21,
+        "Stadtteil": "Hausen"
+      },
+      {
+        "Codes": 22,
+        "Stadtteil": "Praunheim"
+      },
+      {
+        "Codes": 24,
+        "Stadtteil": "Heddernheim"
+      },
+      {
+        "Codes": 25,
+        "Stadtteil": "Niederursel"
+      },
+      {
+        "Codes": 26,
+        "Stadtteil": "Ginnheim"
+      },
+      {
+        "Codes": 27,
+        "Stadtteil": "Dornbusch"
+      },
+      {
+        "Codes": 28,
+        "Stadtteil": "Eschersheim"
+      },
+      {
+        "Codes": 29,
+        "Stadtteil": "Eckenheim"
+      },
+      {
+        "Codes": 30,
+        "Stadtteil": "Preungesheim"
+      },
+      {
+        "Codes": 31,
+        "Stadtteil": "Bonames"
+      },
+      {
+        "Codes": 32,
+        "Stadtteil": "Berkersheim"
+      },
+      {
+        "Codes": 33,
+        "Stadtteil": "Riederwald"
+      },
+      {
+        "Codes": 34,
+        "Stadtteil": "Seckbach"
+      },
+      {
+        "Codes": 35,
+        "Stadtteil": "Fechenheim"
+      },
+      {
+        "Codes": 36,
+        "Stadtteil": "Höchst"
+      },
+      {
+        "Codes": 37,
+        "Stadtteil": "Nied"
+      },
+      {
+        "Codes": 38,
+        "Stadtteil": "Sindlingen"
+      },
+      {
+        "Codes": 39,
+        "Stadtteil": "Zeilsheim"
+      },
+      {
+        "Codes": 40,
+        "Stadtteil": "Unterliederbach"
+      },
+      {
+        "Codes": 41,
+        "Stadtteil": "Sossenheim"
+      },
+      {
+        "Codes": 42,
+        "Stadtteil": "Nieder-Erlenbach"
+      },
+      {
+        "Codes": 43,
+        "Stadtteil": "Kalbach-Riedberg"
+      },
+      {
+        "Codes": 44,
+        "Stadtteil": "Harheim"
+      },
+      {
+        "Codes": 45,
+        "Stadtteil": "Nieder-Eschbach"
+      },
+      {
+        "Codes": 46,
+        "Stadtteil": "Bergen-Enkheim"
+      },
+      {
+        "Codes": 47,
+        "Stadtteil": "Frankfurter Berg"
+      }
+    ]
   }
-]
 }

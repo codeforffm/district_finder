@@ -1,0 +1,224 @@
+{
+  "pools": {
+    "version": "1.0",
+    "href": "http://codeforffm.de/data/district.json",
+    "items": [
+      {
+        "Codes": 1,
+        "district": "Altstadt"
+      },
+      {
+        "Codes": 2,
+        "district": "Innenstadt"
+      },
+      {
+        "Codes": 3,
+        "district": "Bahnhofsviertel"
+      },
+      {
+        "Codes": 4,
+        "district": "Westend-Süd"
+      },
+      {
+        "Codes": 5,
+        "district": "Westend-Nord"
+      },
+      {
+        "Codes": 6,
+        "district": "Nordend-West"
+      },
+      {
+        "Codes": 7,
+        "district": "Nordend-Ost"
+      },
+      {
+        "Codes": 8,
+        "district": "Ostend"
+      },
+      {
+        "Codes": 9,
+        "district": "Bornheim",
+        "pool-name": "Panoramabad Bornheim",
+        "pool-type": "Hallenbad",
+        "addr:city": "Frankfurt",
+        "addr:housenumber":  "60",
+        "addr:postcode": "60385",
+        "addr:street": "Inheidener Straße"
+      },
+      {
+        "Codes": 10,
+        "district": "Gutleutviertel"
+      },
+      {
+        "Codes": 11,
+        "district": "Gallus"
+      },
+      {
+        "Codes": 12,
+        "district": "Bockenheim",
+        "pool-name": "Zum Rebstockbad",
+        "pool-type": "Hallenbad",
+        "addr:city": "Frankfurt",
+        "addr:housenumber":  "7",
+        "addr:postcode": "60486",
+        "addr:street": "Zum Rebstockbad"
+      },
+      {
+        "Codes": 13,
+        "district": "Sachsenhausen-Nord"
+      },
+      {
+        "Codes": 14,
+        "district": "Sachsenhausen-Süd"
+      },
+      {
+        "Codes": 16,
+        "district": "Oberrad"
+      },
+      {
+        "Codes": 17,
+        "district": "Niederrad"
+      },
+      {
+        "Codes": 18,
+        "district": "Schwanheim"
+      },
+      {
+        "Codes": 19,
+        "district": "Griesheim"
+      },
+      {
+        "Codes": 20,
+        "district": "Rödelheim",
+        "pool-name": "Freibad Brentanobad",
+        "pool-type": "Freibad",
+        "addr:city": "Frankfurt",
+        "addr:housenumber":  "",
+        "addr:postcode": "60489",
+        "addr:street": "Rödelheimer Parkweg"
+      },
+      {
+        "Codes": 21,
+        "district": "Hausen",
+        "pool-name": "Freibad Hausen",
+        "pool-type": "Freibad",
+        "addr:city": "Frankfurt",
+        "addr:housenumber":  "341",
+        "addr:postcode": "60488",
+        "addr:street": "Ludwig-Landmann-Straße"
+      },
+      {
+        "Codes": 22,
+        "district": "Praunheim"
+      },
+      {
+        "Codes": 24,
+        "district": "Heddernheim",
+        "pool-name": "Titus Thermen",
+        "pool-type": "Therme",
+        "addr:city": "Frankfurt",
+        "addr:housenumber":  "2",
+        "addr:postcode": "60439",
+        "addr:street": "Walter-Möller-Platz"
+      },
+      {
+        "Codes": 25,
+        "district": "Niederursel"
+      },
+      {
+        "Codes": 26,
+        "district": "Ginnheim"
+      },
+      {
+        "Codes": 27,
+        "district": "Dornbusch"
+      },
+      {
+        "Codes": 28,
+        "district": "Eschersheim",
+        "pool-name": "Freibad Eschersheim",
+        "pool-type": "Freibad",
+        "addr:city": "Frankfurt",
+        "addr:housenumber":  "",
+        "addr:postcode": "60439",
+        "addr:street": "Alexander-Riese-Weg "
+      },
+      {
+        "Codes": 29,
+        "district": "Eckenheim"
+      },
+      {
+        "Codes": 30,
+        "district": "Preungesheim"
+      },
+      {
+        "Codes": 31,
+        "district": "Bodistricts"
+      },
+      {
+        "Codes": 32,
+        "district": "Berkersheim"
+      },
+      {
+        "Codes": 33,
+        "district": "Riederwald"
+      },
+      {
+        "Codes": 34,
+        "district": "Seckbach"
+      },
+      {
+        "Codes": 35,
+        "district": "Fechenheim"
+      },
+      {
+        "Codes": 36,
+        "district": "Höchst"
+      },
+      {
+        "Codes": 37,
+        "district": "Nied"
+      },
+      {
+        "Codes": 38,
+        "district": "Sindlingen"
+      },
+      {
+        "Codes": 39,
+        "district": "Zeilsheim"
+      },
+      {
+        "Codes": 40,
+        "district": "Unterliederbach"
+      },
+      {
+        "Codes": 41,
+        "district": "Sossenheim"
+      },
+      {
+        "Codes": 42,
+        "district": "Nieder-Erlenbach"
+      },
+      {
+        "Codes": 43,
+        "district": "Kalbach-Riedberg"
+      },
+      {
+        "Codes": 44,
+        "district": "Harheim"
+      },
+      {
+        "Codes": 45,
+        "district": "Nieder-Eschbach"
+      },
+      {
+        "Codes": 46,
+        "district": "Bergen-Enkheim"
+      },
+      {
+        "Codes": 47,
+        "district": "Frankfurter Berg"
+      }
+    ]
+  }
+}
