@@ -57,7 +57,7 @@ var DistrictFinder;
 /// <reference path="SerializationHelper"/>
 function GetPrices() {
     var prices = DistrictFinder.SerializationHelper.toInstance(new DistrictFinder.Rentprices(), "rentPrices.json");
-    //var positions = DistrictFinder.SerializationHelper.toInstance(new DistrictFinder.DistrictCenters(), "districtCenters.json");
+    var positions = DistrictFinder.SerializationHelper.toInstance(new DistrictFinder.DistrictCenters(), "districtCenters.json");
     var data;
     data = new Array();
     var highest;
@@ -67,8 +67,13 @@ function GetPrices() {
             highest = element.prices;
     });
     for (var i = 0; i < prices.prices.length; i++) {
-        var item = [8.669173, 50.106046, parseFloat(parseFloat(prices.prices[i].prices) / parseFloat(highest))];
-        data.push(item);
+        for (var y = 0; y < positions.districts.length; y++) {
+            if (positions.districts[y].district == prices.prices[i].district) {
+                var item = [parseFloat(positions.districts[y].x), parseFloat(positions.districts[y].y), parseFloat(parseFloat(prices.prices[i].prices) / parseFloat(highest))];
+                data.push(item);
+                break;
+            }
+        }
     }
     return data;
 }

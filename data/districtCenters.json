@@ -1,4 +1,4 @@
-{  "districts" [
+{  "districts" : [
     {  "district": "Altstadt" , "x":  "50.110427" , "y":  "8.682351"  },
     {  "district": "Innenstadt" , "x":  "50.113800" , "y":  "8.679543" },
     {  "district": "Bahnhofsviertel" , "x":  "50.108773" , "y":  "8.669301" },
