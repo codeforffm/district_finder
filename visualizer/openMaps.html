@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.14.2/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 600px;
+        width: 800px;
+        float: center;
+        margin: 10px;
+        border: 1px solid green;
+      }
+    </style>
+    <script src="http://openlayers.org/en/v3.14.2/build/ol.js" type="text/javascript"></script>
+    <script src="./maps/maps.js" type="text/javascript"></script>
+    <script src="./src/getData.js" type="text/javascript"></script>
+    <title>District Finder</title>
+  </head>
+  <body onload="init()">
+    <h2>Frankfurt</h2>
+      <div>
+          <h3>Selected Layers</h3>
+            <label>
+                <input type="checkbox" name="Layers" value="OpenStreetMap" checked="true" onclick="refresh()">
+                OpenStreetMap
+            </label>
+            <label>
+                <input type="checkbox" name="Layers" value="Districts" checked="true" onclick="refresh()">
+                Districts
+            </label>
+            <label>
+                <input type="checkbox" name="Layers" value="Heatmap" checked="true" onclick="refresh()">
+                Heatmap
+            </label>
+      </div>
+      <div id="map" class="map"></div>
+
+      <script type="text/javascript">
+      
+      var layers = new [];
+      var map;
+      
+      function init() {
+       
+        //HeatMap Data
+        var values = GetDataForHeatMap("NormRentPrices.json");
+
+          // Generating the Map
+        layers = [
+            osmMapLayer(),
+            districtLayer(),
+            heatmapLayer(values)
+        ];
+
+        map = buildMap("map", [8.669173, 50.116046], layers);
+      }
+
+      function refresh() {
+          if (IsChecked("OpenStreetMap"))
+            map.addLayer(layers[0]);
+          else
+            map.removeLayer(layers[0]);
+          
+          if (IsChecked("Districts"))
+            map.addLayer(layers[1]);
+          else
+            map.removeLayer(layers[1]);
+          
+          if (IsChecked("Heatmap"))
+            map.addLayer(layers[2]);
+          else
+            map.removeLayer(layers[2]);
+      }
+      
+      function IsChecked(radioValue) {
+        var checkboxes = document.getElementsByName('Layers');
+        for (var i = 0, length = checkboxes.length; i < length; i++) {
+            if (checkboxes[i].checked && checkboxes[i].value==radioValue) {
+                return true;
+            }
+        }
+        return false;
+      }
+      
+
+    </script>
+  </body>
+</html>
