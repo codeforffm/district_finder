@@ -12,12 +12,13 @@
       }
     </style>
     <script src="http://openlayers.org/en/v3.14.2/build/ol.js" type="text/javascript"></script>
-    <script src="./maps/maps.js" type="text/javascript"></script>
-    <script src="./src/getData.js" type="text/javascript"></script>
+    <script src="./js/maps.js" type="text/javascript"></script>
+    <script src="./js/getData.js" type="text/javascript"></script>
     <title>District Finder</title>
   </head>
   <body onload="init()">
     <h2>Frankfurt</h2>
+      <div id="map" class="map"></div>
       <div>
           <h3>Selected Layers</h3>
             <label>
@@ -32,18 +33,121 @@
                 <input type="checkbox" name="Layers" value="Heatmap" checked="true" onclick="refresh()">
                 Heatmap
             </label>
+            <select name="selectedHeat" size="1" single onchange="refreshHeat()">
+                <option>RentPrices</option>
+                <option>Arbeitslose55bisunter65Jhrige2011</option>
+                <option>Arbeitslose55bisunter65Jhrige2012</option>
+                <option>ArbeitsloseArbeitslosendichte55bisunter65Jhrigein2011</option>
+                <option>ArbeitsloseArbeitslosendichte55bisunter65Jhrigein2012</option>
+                <option>ArbeitsloseArbeitslosendichteAuslnderinnenundAuslnderin2011</option>
+                <option>ArbeitsloseArbeitslosendichteAuslnderinnenundAuslnderin2012</option>
+                <option>ArbeitsloseArbeitslosendichteDeutschein2011</option>
+                <option>ArbeitsloseArbeitslosendichteDeutschein2012</option>
+                <option>ArbeitsloseArbeitslosendichteFrauenin2011</option>
+                <option>ArbeitsloseArbeitslosendichteFrauenin2012</option>
+                <option>ArbeitsloseArbeitslosendichtein2011</option>
+                <option>ArbeitsloseArbeitslosendichtein2012</option>
+                <option>ArbeitsloseArbeitslosendichteMnnerin2011</option>
+                <option>ArbeitsloseArbeitslosendichteMnnerin2012</option>
+                <option>ArbeitsloseArbeitslosendichteSGBIIIin2011</option>
+                <option>ArbeitsloseArbeitslosendichteSGBIIIin2012</option>
+                <option>ArbeitsloseArbeitslosendichteSGBIIin2011</option>
+                <option>ArbeitsloseArbeitslosendichteSGBIIin2012</option>
+                <option>ArbeitsloseArbeitslosendichteunter25Jhrigein2011</option>
+                <option>ArbeitsloseArbeitslosendichteunter25Jhrigein2012</option>
+                <option>ArbeitsloseAuslnderinnenundAuslnder2011</option>
+                <option>ArbeitsloseAuslnderinnenundAuslnder2012</option>
+                <option>ArbeitsloseDeutsche2011</option>
+                <option>ArbeitsloseDeutsche2012</option>
+                <option>ArbeitsloseFrauen2011</option>
+                <option>ArbeitsloseFrauen2012</option>
+                <option>ArbeitsloseInsgesamt2011</option>
+                <option>ArbeitsloseInsgesamt2012</option>
+                <option>ArbeitsloseMnner2011</option>
+                <option>ArbeitsloseMnner2012</option>
+                <option>ArbeitsloseSGBII2011</option>
+                <option>ArbeitsloseSGBII2012</option>
+                <option>ArbeitsloseSGBIII2011</option>
+                <option>ArbeitsloseSGBIII2012</option>
+                <option>Arbeitsloseunter25Jhrige2011</option>
+                <option>Arbeitsloseunter25Jhrige2012</option>
+                <option>ErwerbsfhigePersonenAuslnderinnenundAuslnder2011</option>
+                <option>ErwerbsfhigePersonenAuslnderinnenundAuslnder2012</option>
+                <option>ErwerbsfhigePersonenDeutsche2011</option>
+                <option>ErwerbsfhigePersonenDeutsche2012</option>
+                <option>ErwerbsfhigePersonenErwerbsfhigendichtein2011</option>
+                <option>ErwerbsfhigePersonenErwerbsfhigendichtein2012</option>
+                <option>ErwerbsfhigePersonenFrauen2011</option>
+                <option>ErwerbsfhigePersonenFrauen2012</option>
+                <option>ErwerbsfhigePersonenInsgesamt2011</option>
+                <option>ErwerbsfhigePersonenInsgesamt2012</option>
+                <option>ErwerbsfhigePersonenMnner2011</option>
+                <option>ErwerbsfhigePersonenMnner2012</option>
+                <option>Insgesamt2012</option>
+                <option>SGBIIILeistungsempfngerinnenInsgesamt2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnort15bisunter25Jhrige2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnort15bisunter25Jhrige2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortAuslnderinnenundAuslnder2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortAuslnderinnenundAuslnder2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichte15bisunter25Jhrigein2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichte15bisunter25Jhrigein2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteAuslnderinnenundAuslnderin2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteAuslnderinnenundAuslnderin2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteDeutschein2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteDeutschein2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteFrauenin2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteFrauenin2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichtein2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichtein2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteMnnerin2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteMnnerin2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber2000bis40002010</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber4000bis50002010</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber50002010</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltbis20002010</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortDeutsche2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortDeutsche2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortFrauen2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortFrauen2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortInsgesamt2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortInsgesamt2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMedianBruttoarbeitsentgelte2010</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMidijobberinnen2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMidijobberinnen2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMidijobdichtein2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMidijobdichtein2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobberinnen2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobberinnen2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobdichtein2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobdichtein2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobs15bisunter25Jhrige2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobs15bisunter25Jhrige2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobsAuslnderinnenundAuslnder2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobsAuslnderinnenundAuslnder2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobsDeutsche2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobsDeutsche2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobsFrauen2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobsFrauen2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobsMnner2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMinijobsMnner2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMnner2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortMnner2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortNebenjobdichtein2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortNebenjobdichtein2012</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortNebenjobs2011</option>
+                <option>SozialversicherungspflichtigBeschftigteWohnortNebenjobs2012</option>
+            </select>
       </div>
-      <div id="map" class="map"></div>
 
       <script type="text/javascript">
       
-      var layers = new [];
+      var layers;
       var map;
       
       function init() {
        
         //HeatMap Data
-        var values = GetDataForHeatMap("NormRentPrices.json");
+        var values = GetDataForHeatMap("RentPrices.json");
 
           // Generating the Map
         layers = [
@@ -80,6 +184,20 @@
             }
         }
         return false;
+      }
+      
+      function refreshHeat() {
+          var name = GetJsonNameForSelectedOption();
+          var values = GetDataForHeatMap(name);
+          var newHeatMap = heatmapLayer(values);
+          map.removeLayer(layers[2])
+          map.addLayer(newHeatMap);
+          layers[2] = newHeatMap;
+      }
+
+      function GetJsonNameForSelectedOption(){
+        var listBox = document.getElementsByName('selectedHeat');
+        return listBox[0].value + ".json"          
       }
       
 

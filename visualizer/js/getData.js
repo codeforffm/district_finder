@@ -1,7 +1,7 @@
 ﻿
 function toInstance(jsonfilename) {
     var request = new XMLHttpRequest();
-    request.open("get", "https://raw.githubusercontent.com/codeforffm/district_finder/master/data/" + jsonfilename, false);
+    request.open("get", "https://raw.githubusercontent.com/codeforffm/district_finder/master/visualizer/data/" + jsonfilename, false);
     request.send();
     var obj = JSON.parse(request.responseText);
     return obj;
