@@ -10,7 +10,7 @@ function buildMap(target, coord, layers) {
     layers: layers,
     view: new ol.View({
       center: ol.proj.fromLonLat(coord),
-      zoom: 12,
+      zoom: 10,
       minZoom:10
     })
   });
@@ -66,7 +66,7 @@ function heatmapLayer(values) {
   //building the heatmap layer
   var heatmapLayer = new ol.layer.Heatmap({
     source:data,
-    radius:50,
+    radius:20,
     opacity:0.9
   });
 

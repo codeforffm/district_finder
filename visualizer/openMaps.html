@@ -4,23 +4,21 @@
     <link rel="stylesheet" href="http://openlayers.org/en/v3.14.2/css/ol.css" type="text/css">
     <style>
       .map {
-        height: 600px;
-        width: 800px;
+        height: 745px;
+        width: 100%;
         float: center;
-        margin: 10px;
+        margin: 0px;
         border: 1px solid green;
       }
     </style>
     <script src="http://openlayers.org/en/v3.14.2/build/ol.js" type="text/javascript"></script>
     <script src="./js/maps.js" type="text/javascript"></script>
     <script src="./js/getData.js" type="text/javascript"></script>
-    <title>District Finder</title>
+    <title>District Finder FFM</title>
   </head>
   <body onload="init()">
-    <h2>Frankfurt</h2>
       <div id="map" class="map"></div>
       <div>
-          <h3>Selected Layers</h3>
             <label>
                 <input type="checkbox" name="Layers" value="OpenStreetMap" checked="true" onclick="refresh()">
                 OpenStreetMap
@@ -155,8 +153,7 @@
             districtLayer(),
             heatmapLayer(values)
         ];
-
-        map = buildMap("map", [8.669173, 50.116046], layers);
+        map = buildMap("map", [8.654652, 50.132663], layers);
       }
 
       function refresh() {
