@@ -45,7 +45,7 @@ google.maps.event.addDomListener(window,'load', function(){
 /** Loads FFM district polygons*/
 function loadMapShapes(){
 	//loads FFM geojson file
-	map.data.loadGeoJson('https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/frankfurt-main.geojson');
+	map.data.loadGeoJson('https://raw.githubusercontent.com/codeforffm/district_finder/master/googlemaps/frankfurt-main.geojson');
 	
 	google.maps.event.addListenerOnce(map.data, 'addfeature', function(){
 		google.maps.event.trigger(document.getElementById('criteria-variable'), 'change');
