@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frankfurt District Finder</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+  </head>
+  <body id="map-container">
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="script.js"></script>
+    
+	 
+
+	<div id="controls" class="nicebox">
+
+		<div>
+			<select id="criteria-variable">
+                <option value="RentPrices">RentPrices</option>
+                <option value="Arbeitslose55bisunter65Jhrige2011">Arbeitslose55bisunter65Jhrige2011</option>
+                <option value="Arbeitslose55bisunter65Jhrige2012">Arbeitslose55bisunter65Jhrige2012</option>
+                <option value="ArbeitsloseArbeitslosendichte55bisunter65Jhrigein2011">ArbeitsloseArbeitslosendichte55bisunter65Jhrigein2011</option>
+                <option value="ArbeitsloseArbeitslosendichte55bisunter65Jhrigein2012">ArbeitsloseArbeitslosendichte55bisunter65Jhrigein2012</option>
+                <option value="ArbeitsloseArbeitslosendichteAuslnderinnenundAuslnderin2011">ArbeitsloseArbeitslosendichteAuslnderinnenundAuslnderin2011</option>
+                <option value="ArbeitsloseArbeitslosendichteAuslnderinnenundAuslnderin2012">ArbeitsloseArbeitslosendichteAuslnderinnenundAuslnderin2012</option>
+                <option value="ArbeitsloseArbeitslosendichteDeutschein2011">ArbeitsloseArbeitslosendichteDeutschein2011</option>
+                <option value="ArbeitsloseArbeitslosendichteDeutschein2012">ArbeitsloseArbeitslosendichteDeutschein2012</option>
+                <option value="ArbeitsloseArbeitslosendichteFrauenin2011">ArbeitsloseArbeitslosendichteFrauenin2011</option>
+                <option value="ArbeitsloseArbeitslosendichteFrauenin2012">ArbeitsloseArbeitslosendichteFrauenin2012</option>
+                <option value="ArbeitsloseArbeitslosendichtein2011">ArbeitsloseArbeitslosendichtein2011</option>
+                <option value="ArbeitsloseArbeitslosendichtein2012">ArbeitsloseArbeitslosendichtein2012</option>
+                <option value="ArbeitsloseArbeitslosendichteMnnerin2011">ArbeitsloseArbeitslosendichteMnnerin2011</option>
+                <option value="ArbeitsloseArbeitslosendichteMnnerin2012">ArbeitsloseArbeitslosendichteMnnerin2012</option>
+                <option value="ArbeitsloseArbeitslosendichteSGBIIIin2011">ArbeitsloseArbeitslosendichteSGBIIIin2011</option>
+                <option value="ArbeitsloseArbeitslosendichteSGBIIIin2012">ArbeitsloseArbeitslosendichteSGBIIIin2012</option>
+                <option value="ArbeitsloseArbeitslosendichteSGBIIin2011">ArbeitsloseArbeitslosendichteSGBIIin2011</option>
+                <option value="ArbeitsloseArbeitslosendichteSGBIIin2012">ArbeitsloseArbeitslosendichteSGBIIin2012</option>
+                <option value="ArbeitsloseArbeitslosendichteunter25Jhrigein2011">ArbeitsloseArbeitslosendichteunter25Jhrigein2011</option>
+                <option value="ArbeitsloseArbeitslosendichteunter25Jhrigein2012">ArbeitsloseArbeitslosendichteunter25Jhrigein2012</option>
+                <option value="ArbeitsloseAuslnderinnenundAuslnder2011">ArbeitsloseAuslnderinnenundAuslnder2011</option>
+                <option value="ArbeitsloseAuslnderinnenundAuslnder2012">ArbeitsloseAuslnderinnenundAuslnder2012</option>
+                <option value="ArbeitsloseDeutsche2011">ArbeitsloseDeutsche2011</option>
+                <option value="ArbeitsloseDeutsche2012">ArbeitsloseDeutsche2012</option>
+                <option value="ArbeitsloseFrauen2011">ArbeitsloseFrauen2011</option>
+                <option value="ArbeitsloseFrauen2012">ArbeitsloseFrauen2012</option>
+                <option value="ArbeitsloseInsgesamt2011">ArbeitsloseInsgesamt2011</option>
+                <option value="ArbeitsloseInsgesamt2012">ArbeitsloseInsgesamt2012</option>
+                <option value="ArbeitsloseMnner2011">ArbeitsloseMnner2011</option>
+                <option value="ArbeitsloseMnner2012">ArbeitsloseMnner2012</option>
+                <option value="ArbeitsloseSGBII2011">ArbeitsloseSGBII2011</option>
+                <option value="ArbeitsloseSGBII2012">ArbeitsloseSGBII2012</option>
+                <option value="ArbeitsloseSGBIII2011">ArbeitsloseSGBIII2011</option>
+                <option value="ArbeitsloseSGBIII2012">ArbeitsloseSGBIII2012</option>
+                <option value="Arbeitsloseunter25Jhrige2011">Arbeitsloseunter25Jhrige2011</option>
+                <option value="Arbeitsloseunter25Jhrige2012">Arbeitsloseunter25Jhrige2012</option>
+                <option value="ErwerbsfhigePersonenAuslnderinnenundAuslnder2011">ErwerbsfhigePersonenAuslnderinnenundAuslnder2011</option>
+                <option value="ErwerbsfhigePersonenAuslnderinnenundAuslnder2012">ErwerbsfhigePersonenAuslnderinnenundAuslnder2012</option>
+                <option value="ErwerbsfhigePersonenDeutsche2011">ErwerbsfhigePersonenDeutsche2011</option>
+                <option value="ErwerbsfhigePersonenDeutsche2012">ErwerbsfhigePersonenDeutsche2012</option>
+                <option value="ErwerbsfhigePersonenErwerbsfhigendichtein2011">ErwerbsfhigePersonenErwerbsfhigendichtein2011</option>
+                <option value="ErwerbsfhigePersonenErwerbsfhigendichtein2012">ErwerbsfhigePersonenErwerbsfhigendichtein2012</option>
+                <option value="ErwerbsfhigePersonenFrauen2011">ErwerbsfhigePersonenFrauen2011</option>
+                <option value="ErwerbsfhigePersonenFrauen2012">ErwerbsfhigePersonenFrauen2012</option>
+                <option value="ErwerbsfhigePersonenInsgesamt2011">ErwerbsfhigePersonenInsgesamt2011</option>
+                <option value="ErwerbsfhigePersonenInsgesamt2012">ErwerbsfhigePersonenInsgesamt2012</option>
+                <option value="ErwerbsfhigePersonenMnner2011">ErwerbsfhigePersonenMnner2011</option>
+                <option value="ErwerbsfhigePersonenMnner2012">ErwerbsfhigePersonenMnner2012</option>
+                <option value="Insgesamt2012">Insgesamt2012</option>
+                <option value="SGBIIILeistungsempfngerinnenInsgesamt2011">SGBIIILeistungsempfngerinnenInsgesamt2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnort15bisunter25Jhrige2011">SozialversicherungspflichtigBeschftigteWohnort15bisunter25Jhrige2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnort15bisunter25Jhrige2012">SozialversicherungspflichtigBeschftigteWohnort15bisunter25Jhrige2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortAuslnderinnenundAuslnder2011">SozialversicherungspflichtigBeschftigteWohnortAuslnderinnenundAuslnder2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortAuslnderinnenundAuslnder2012">SozialversicherungspflichtigBeschftigteWohnortAuslnderinnenundAuslnder2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichte15bisunter25Jhrigein2011">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichte15bisunter25Jhrigein2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichte15bisunter25Jhrigein2012">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichte15bisunter25Jhrigein2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteAuslnderinnenundAuslnderin2011">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteAuslnderinnenundAuslnderin2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteAuslnderinnenundAuslnderin2012">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteAuslnderinnenundAuslnderin2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteDeutschein2011">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteDeutschein2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteDeutschein2012">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteDeutschein2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteFrauenin2011">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteFrauenin2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteFrauenin2012">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteFrauenin2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichtein2011">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichtein2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichtein2012">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichtein2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteMnnerin2011">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteMnnerin2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteMnnerin2012">SozialversicherungspflichtigBeschftigteWohnortBeschftigtendichteMnnerin2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber2000bis40002010">SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber2000bis40002010</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber4000bis50002010">SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber4000bis50002010</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber50002010">SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltber50002010</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltbis20002010">SozialversicherungspflichtigBeschftigteWohnortBruttoarbeitsentgeltbis20002010</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortDeutsche2011">SozialversicherungspflichtigBeschftigteWohnortDeutsche2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortDeutsche2012">SozialversicherungspflichtigBeschftigteWohnortDeutsche2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortFrauen2011">SozialversicherungspflichtigBeschftigteWohnortFrauen2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortFrauen2012">SozialversicherungspflichtigBeschftigteWohnortFrauen2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortInsgesamt2011">SozialversicherungspflichtigBeschftigteWohnortInsgesamt2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortInsgesamt2012">SozialversicherungspflichtigBeschftigteWohnortInsgesamt2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMedianBruttoarbeitsentgelte2010">SozialversicherungspflichtigBeschftigteWohnortMedianBruttoarbeitsentgelte2010</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMidijobberinnen2011">SozialversicherungspflichtigBeschftigteWohnortMidijobberinnen2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMidijobberinnen2012">SozialversicherungspflichtigBeschftigteWohnortMidijobberinnen2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMidijobdichtein2011">SozialversicherungspflichtigBeschftigteWohnortMidijobdichtein2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMidijobdichtein2012">SozialversicherungspflichtigBeschftigteWohnortMidijobdichtein2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobberinnen2011">SozialversicherungspflichtigBeschftigteWohnortMinijobberinnen2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobberinnen2012">SozialversicherungspflichtigBeschftigteWohnortMinijobberinnen2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobdichtein2011">SozialversicherungspflichtigBeschftigteWohnortMinijobdichtein2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobdichtein2012">SozialversicherungspflichtigBeschftigteWohnortMinijobdichtein2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobs15bisunter25Jhrige2011">SozialversicherungspflichtigBeschftigteWohnortMinijobs15bisunter25Jhrige2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobs15bisunter25Jhrige2012">SozialversicherungspflichtigBeschftigteWohnortMinijobs15bisunter25Jhrige2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobsAuslnderinnenundAuslnder2011">SozialversicherungspflichtigBeschftigteWohnortMinijobsAuslnderinnenundAuslnder2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobsAuslnderinnenundAuslnder2012">SozialversicherungspflichtigBeschftigteWohnortMinijobsAuslnderinnenundAuslnder2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobsDeutsche2011">SozialversicherungspflichtigBeschftigteWohnortMinijobsDeutsche2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobsDeutsche2012">SozialversicherungspflichtigBeschftigteWohnortMinijobsDeutsche2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobsFrauen2011">SozialversicherungspflichtigBeschftigteWohnortMinijobsFrauen2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobsFrauen2012">SozialversicherungspflichtigBeschftigteWohnortMinijobsFrauen2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobsMnner2011">SozialversicherungspflichtigBeschftigteWohnortMinijobsMnner2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMinijobsMnner2012">SozialversicherungspflichtigBeschftigteWohnortMinijobsMnner2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMnner2011">SozialversicherungspflichtigBeschftigteWohnortMnner2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortMnner2012">SozialversicherungspflichtigBeschftigteWohnortMnner2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortNebenjobdichtein2011">SozialversicherungspflichtigBeschftigteWohnortNebenjobdichtein2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortNebenjobdichtein2012">SozialversicherungspflichtigBeschftigteWohnortNebenjobdichtein2012</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortNebenjobs2011">SozialversicherungspflichtigBeschftigteWohnortNebenjobs2011</option>
+                <option value="SozialversicherungspflichtigBeschftigteWohnortNebenjobs2012">SozialversicherungspflichtigBeschftigteWohnortNebenjobs2012</option>
+			</select>
+		</div>
+     
+		<div id="legend">
+			<div id="criteria-min">min</div>
+			<div class="color-key"><span id="data-caret">&#x25c6;</span></div>
+			<div id="criteria-max">max</div>
+		</div>
+
+	</div>
+    
+	<div id="data-box" class="nicebox">
+		<label id="data-label" for="data-value"></label>
+		<span id="data-value"></span>
+    </div>
+	<div id="map"></div>
+  </body>
+</html>
